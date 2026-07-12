@@ -1,0 +1,30 @@
+{
+  "id": "patient-triagefor-er",
+  "title": "Patient Triagefor Er App",
+  "industry": "Healthcare & Life Sciences",
+  "industryId": "healthcare-life-sciences",
+  "specialization": "Patient Triagefor Er",
+  "sourcePlatformGroup": "clinical-hospital-operations-platform",
+  "sources": [
+    "AIHealthcareCompanion",
+    "AIPatientTriageforER",
+    "AIPredictdisease",
+    "AIRemotePatientMonitoring"
+  ],
+  "featureCount": 393,
+  "candidateFeatureCount": 519,
+  "eliminatedSimilarFeatures": 126,
+  "evidenceCount": 1536,
+  "aiPageCount": 0,
+  "sourceAIPageCount": 0,
+  "featureEvidencePolicy": "Existing source routes, pages, APIs, models, schemas, and navigation only",
+  "optimizationPolicy": "Equivalent feature names are consolidated once per industry and assigned to one canonical app owner",
+  "database": "database.sqlite",
+  "databaseSeed": {
+    "seededProjects": 0,
+    "seededTables": 0,
+    "seededRows": 0
+  },
+  "visibleFeatureCount": 183,
+  "featureVisibilityMode": "source-backed-fallback"
+}
