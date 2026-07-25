@@ -11,12 +11,12 @@
     "AIPredictdisease",
     "AIRemotePatientMonitoring"
   ],
-  "featureCount": 400,
-  "candidateFeatureCount": 529,
-  "eliminatedSimilarFeatures": 129,
-  "evidenceCount": 1581,
-  "aiPageCount": 0,
-  "sourceAIPageCount": 0,
+  "featureCount": 416,
+  "candidateFeatureCount": 539,
+  "eliminatedSimilarFeatures": 123,
+  "evidenceCount": 1614,
+  "aiPageCount": 27,
+  "sourceAIPageCount": 27,
   "featureEvidencePolicy": "Existing source routes, pages, APIs, models, schemas, and navigation only",
   "optimizationPolicy": "Equivalent feature names are consolidated once per industry and assigned to one canonical app owner",
   "database": "database.sqlite",
@@ -25,6 +25,6 @@
     "seededTables": 0,
     "seededRows": 0
   },
-  "visibleFeatureCount": 183,
-  "featureVisibilityMode": "source-backed-fallback"
+  "visibleFeatureCount": 24,
+  "featureVisibilityMode": "seeded-or-ai"
 }

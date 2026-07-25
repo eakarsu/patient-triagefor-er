@@ -686,6 +686,94 @@
     ]
   },
   {
+    "name": "Analyze",
+    "canonicalKey": "analyze",
+    "aliases": [],
+    "kinds": [
+      "ai-page",
+      "api"
+    ],
+    "routes": [
+      "/:id/analyze",
+      "/analyze",
+      "/medical-history?tool=analyze",
+      "/medications?tool=analyze",
+      "/skin-scans?tool=analyze",
+      "/vision-tests?tool=analyze"
+    ],
+    "sourceProjects": [
+      "AIHealthcareCompanion"
+    ],
+    "consolidatedFromApps": [
+      "healthcare-life-sciences/patient-triagefor-er"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIHealthcareCompanion",
+        "path": "client/src/pages/MedicalHistory.jsx:443",
+        "route": "/medical-history?tool=analyze",
+        "originApp": "healthcare-life-sciences/patient-triagefor-er"
+      },
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIHealthcareCompanion",
+        "path": "client/src/pages/Medications.jsx:381",
+        "route": "/medications?tool=analyze",
+        "originApp": "healthcare-life-sciences/patient-triagefor-er"
+      },
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIHealthcareCompanion",
+        "path": "client/src/pages/SkinScans.jsx:507",
+        "route": "/skin-scans?tool=analyze",
+        "originApp": "healthcare-life-sciences/patient-triagefor-er"
+      },
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIHealthcareCompanion",
+        "path": "client/src/pages/VisionTests.jsx:417",
+        "route": "/vision-tests?tool=analyze",
+        "originApp": "healthcare-life-sciences/patient-triagefor-er"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIHealthcareCompanion",
+        "path": "server/routes/medicalHistory.js:111",
+        "route": "/:id/analyze",
+        "originApp": "healthcare-life-sciences/patient-triagefor-er"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIHealthcareCompanion",
+        "path": "server/routes/medications.js:115",
+        "route": "/:id/analyze",
+        "originApp": "healthcare-life-sciences/patient-triagefor-er"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIHealthcareCompanion",
+        "path": "server/routes/skinScans.js:115",
+        "route": "/:id/analyze",
+        "originApp": "healthcare-life-sciences/patient-triagefor-er"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIHealthcareCompanion",
+        "path": "server/routes/symptomAnalyzer.js:15",
+        "route": "/analyze",
+        "originApp": "healthcare-life-sciences/patient-triagefor-er"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIHealthcareCompanion",
+        "path": "server/routes/visionTests.js:111",
+        "route": "/:id/analyze",
+        "originApp": "healthcare-life-sciences/patient-triagefor-er"
+      }
+    ]
+  },
+  {
     "name": "Analyze All",
     "canonicalKey": "all analyze",
     "aliases": [],
@@ -723,10 +811,12 @@
     "canonicalKey": "analyze form",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "api"
     ],
     "routes": [
-      "/:id/analyze-form"
+      "/:id/analyze-form",
+      "/physical-therapy?tool=analyze-form"
     ],
     "sourceProjects": [
       "AIHealthcareCompanion"
@@ -735,6 +825,13 @@
       "healthcare-life-sciences/patient-triagefor-er"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIHealthcareCompanion",
+        "path": "client/src/pages/PhysicalTherapy.jsx:444",
+        "route": "/physical-therapy?tool=analyze-form",
+        "originApp": "healthcare-life-sciences/patient-triagefor-er"
+      },
       {
         "kind": "api",
         "sourceProject": "AIHealthcareCompanion",
@@ -1609,14 +1706,12 @@
   {
     "name": "Caregiver Coaching",
     "canonicalKey": "caregiver coaching",
-    "aliases": [
-      "Caregiver Coaching Page"
-    ],
+    "aliases": [],
     "kinds": [
+      "ai-page",
       "page"
     ],
     "routes": [
-      "/CaregiverCoachingPage",
       "/caregiver-coaching"
     ],
     "sourceProjects": [
@@ -1626,6 +1721,13 @@
       "healthcare-life-sciences/patient-triagefor-er"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIRemotePatientMonitoring",
+        "path": "frontend/src/pages/CaregiverCoachingPage.jsx:1",
+        "route": "/caregiver-coaching",
+        "originApp": "healthcare-life-sciences/patient-triagefor-er"
+      },
       {
         "kind": "page",
         "sourceProject": "AIRemotePatientMonitoring",
@@ -1639,7 +1741,26 @@
         "path": "frontend/src/components/Layout.jsx:18",
         "route": "/caregiver-coaching",
         "originApp": "healthcare-life-sciences/patient-triagefor-er"
-      },
+      }
+    ]
+  },
+  {
+    "name": "Caregiver Coaching Page",
+    "canonicalKey": "caregiver coaching",
+    "aliases": [],
+    "kinds": [
+      "page"
+    ],
+    "routes": [
+      "/CaregiverCoachingPage"
+    ],
+    "sourceProjects": [
+      "AIRemotePatientMonitoring"
+    ],
+    "consolidatedFromApps": [
+      "healthcare-life-sciences/patient-triagefor-er"
+    ],
+    "evidence": [
       {
         "kind": "page",
         "sourceProject": "AIRemotePatientMonitoring",
@@ -3451,12 +3572,14 @@
     "canonicalKey": "analyze comorbidity",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "api",
       "page"
     ],
     "routes": [
       "/ComorbidityAnalyze",
-      "/comorbidity-analyze"
+      "/comorbidity-analyze",
+      "/comorbidity-analyze?tool=comorbidity-analyze"
     ],
     "sourceProjects": [
       "AIPredictdisease"
@@ -3465,6 +3588,13 @@
       "healthcare-life-sciences/patient-triagefor-er"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIPredictdisease",
+        "path": "frontend/src/pages/ComorbidityAnalyze.jsx:62",
+        "route": "/comorbidity-analyze?tool=comorbidity-analyze",
+        "originApp": "healthcare-life-sciences/patient-triagefor-er"
+      },
       {
         "kind": "api",
         "sourceProject": "AIPredictdisease",
@@ -3651,6 +3781,32 @@
         "sourceProject": "AIRemotePatientMonitoring",
         "path": "frontend/src/pages/CostAwarePlanPage.jsx",
         "route": "/CostAwarePlanPage",
+        "originApp": "healthcare-life-sciences/patient-triagefor-er"
+      }
+    ]
+  },
+  {
+    "name": "Cost Aware Treatment Plan",
+    "canonicalKey": "aware cost plan treatment",
+    "aliases": [],
+    "kinds": [
+      "ai-page"
+    ],
+    "routes": [
+      "/cost-aware-plan"
+    ],
+    "sourceProjects": [
+      "AIRemotePatientMonitoring"
+    ],
+    "consolidatedFromApps": [
+      "healthcare-life-sciences/patient-triagefor-er"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIRemotePatientMonitoring",
+        "path": "frontend/src/pages/CostAwarePlanPage.jsx:1",
+        "route": "/cost-aware-plan",
         "originApp": "healthcare-life-sciences/patient-triagefor-er"
       }
     ]
@@ -4667,16 +4823,14 @@
     ]
   },
   {
-    "name": "Decompensation Alert Page",
+    "name": "Decompensation Alert",
     "canonicalKey": "alert decompensation",
-    "aliases": [
-      "Decompensation Alert"
-    ],
+    "aliases": [],
     "kinds": [
+      "ai-page",
       "page"
     ],
     "routes": [
-      "/DecompensationAlertPage",
       "/decompensation-alert"
     ],
     "sourceProjects": [
@@ -4687,12 +4841,38 @@
     ],
     "evidence": [
       {
+        "kind": "ai-page",
+        "sourceProject": "AIRemotePatientMonitoring",
+        "path": "frontend/src/pages/DecompensationAlertPage.jsx:1",
+        "route": "/decompensation-alert",
+        "originApp": "healthcare-life-sciences/patient-triagefor-er"
+      },
+      {
         "kind": "page",
         "sourceProject": "AIRemotePatientMonitoring",
         "path": "frontend/src/App.jsx:68",
         "route": "/decompensation-alert",
         "originApp": "healthcare-life-sciences/patient-triagefor-er"
-      },
+      }
+    ]
+  },
+  {
+    "name": "Decompensation Alert Page",
+    "canonicalKey": "alert decompensation",
+    "aliases": [],
+    "kinds": [
+      "page"
+    ],
+    "routes": [
+      "/DecompensationAlertPage"
+    ],
+    "sourceProjects": [
+      "AIRemotePatientMonitoring"
+    ],
+    "consolidatedFromApps": [
+      "healthcare-life-sciences/patient-triagefor-er"
+    ],
+    "evidence": [
       {
         "kind": "page",
         "sourceProject": "AIRemotePatientMonitoring",
@@ -4967,28 +5147,28 @@
     "canonicalKey": "diagnosis differential",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "api",
       "page"
     ],
     "routes": [
       "/DifferentialDiagnosis",
-      "/differential-diagnosis"
+      "/differential-diagnosis",
+      "/differential-diagnosis?tool=differential-diagnosis"
     ],
     "sourceProjects": [
-      "AIPredictdisease",
-      "AIRadiologyReportGenerator"
+      "AIPredictdisease"
     ],
     "consolidatedFromApps": [
-      "healthcare-life-sciences/ambulance-ems-dispatch",
       "healthcare-life-sciences/patient-triagefor-er"
     ],
     "evidence": [
       {
-        "kind": "api",
-        "sourceProject": "AIRadiologyReportGenerator",
-        "path": "server/routes/ai.js:331",
-        "route": "/differential-diagnosis",
-        "originApp": "healthcare-life-sciences/ambulance-ems-dispatch"
+        "kind": "ai-page",
+        "sourceProject": "AIPredictdisease",
+        "path": "frontend/src/pages/DifferentialDiagnosis.jsx:76",
+        "route": "/differential-diagnosis?tool=differential-diagnosis",
+        "originApp": "healthcare-life-sciences/patient-triagefor-er"
       },
       {
         "kind": "api",
@@ -5618,6 +5798,63 @@
     ]
   },
   {
+    "name": "Drug Interactions",
+    "canonicalKey": "drug interaction",
+    "aliases": [],
+    "kinds": [
+      "ai-page",
+      "api",
+      "page"
+    ],
+    "routes": [
+      "/drug-interactions",
+      "/drug-interactions?tool=drug-interactions"
+    ],
+    "sourceProjects": [
+      "AIPredictdisease"
+    ],
+    "consolidatedFromApps": [
+      "healthcare-life-sciences/patient-triagefor-er"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIPredictdisease",
+        "path": "frontend/src/pages/DrugInteractionChecker.jsx:61",
+        "route": "/drug-interactions?tool=drug-interactions",
+        "originApp": "healthcare-life-sciences/patient-triagefor-er"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIPredictdisease",
+        "path": "backend/src/routes/ai.js:491",
+        "route": "/drug-interactions",
+        "originApp": "healthcare-life-sciences/patient-triagefor-er"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "AIPredictdisease",
+        "path": "frontend/src/App.jsx:74",
+        "route": "/drug-interactions",
+        "originApp": "healthcare-life-sciences/patient-triagefor-er"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "AIPredictdisease",
+        "path": "frontend/src/components/Navbar.jsx:19",
+        "route": "/drug-interactions",
+        "originApp": "healthcare-life-sciences/patient-triagefor-er"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "AIPredictdisease",
+        "path": "frontend/src/pages/Dashboard.jsx:113",
+        "route": "/drug-interactions",
+        "originApp": "healthcare-life-sciences/patient-triagefor-er"
+      }
+    ]
+  },
+  {
     "name": "Ehr",
     "canonicalKey": "ehr",
     "aliases": [],
@@ -6231,10 +6468,12 @@
     "canonicalKey": "calculate esi",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "api"
     ],
     "routes": [
-      "/esi-calculate"
+      "/esi-calculate",
+      "/esi-calculator?tool=esi-calculate"
     ],
     "sourceProjects": [
       "AIPatientTriageforER"
@@ -6243,6 +6482,13 @@
       "healthcare-life-sciences/patient-triagefor-er"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIPatientTriageforER",
+        "path": "frontend/src/pages/ESICalculatorPage.js:82",
+        "route": "/esi-calculator?tool=esi-calculate",
+        "originApp": "healthcare-life-sciences/patient-triagefor-er"
+      },
       {
         "kind": "api",
         "sourceProject": "AIPatientTriageforER",
@@ -12895,6 +13141,32 @@
     ]
   },
   {
+    "name": "Longitudinal Trajectory Analysis",
+    "canonicalKey": "analysis longitudinal trajectory",
+    "aliases": [],
+    "kinds": [
+      "ai-page"
+    ],
+    "routes": [
+      "/longitudinal-trajectory"
+    ],
+    "sourceProjects": [
+      "AIRemotePatientMonitoring"
+    ],
+    "consolidatedFromApps": [
+      "healthcare-life-sciences/patient-triagefor-er"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIRemotePatientMonitoring",
+        "path": "frontend/src/pages/LongitudinalTrajectoryPage.jsx:1",
+        "route": "/longitudinal-trajectory",
+        "originApp": "healthcare-life-sciences/patient-triagefor-er"
+      }
+    ]
+  },
+  {
     "name": "Map Cpt To Procedure",
     "canonicalKey": "cpt map procedure to",
     "aliases": [],
@@ -12975,16 +13247,15 @@
   {
     "name": "Med Safety",
     "canonicalKey": "med safety",
-    "aliases": [
-      "Med Safety Page"
-    ],
+    "aliases": [],
     "kinds": [
+      "ai-page",
       "api",
       "page"
     ],
     "routes": [
-      "/MedSafetyPage",
-      "/med-safety"
+      "/med-safety",
+      "/med-safety?tool=med-safety"
     ],
     "sourceProjects": [
       "AIPatientTriageforER"
@@ -12993,6 +13264,13 @@
       "healthcare-life-sciences/patient-triagefor-er"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIPatientTriageforER",
+        "path": "frontend/src/pages/MedSafetyPage.js:68",
+        "route": "/med-safety?tool=med-safety",
+        "originApp": "healthcare-life-sciences/patient-triagefor-er"
+      },
       {
         "kind": "api",
         "sourceProject": "AIPatientTriageforER",
@@ -13020,7 +13298,26 @@
         "path": "frontend/src/pages/Dashboard.js:23",
         "route": "/med-safety",
         "originApp": "healthcare-life-sciences/patient-triagefor-er"
-      },
+      }
+    ]
+  },
+  {
+    "name": "Med Safety Page",
+    "canonicalKey": "med safety",
+    "aliases": [],
+    "kinds": [
+      "page"
+    ],
+    "routes": [
+      "/MedSafetyPage"
+    ],
+    "sourceProjects": [
+      "AIPatientTriageforER"
+    ],
+    "consolidatedFromApps": [
+      "healthcare-life-sciences/patient-triagefor-er"
+    ],
+    "evidence": [
       {
         "kind": "page",
         "sourceProject": "AIPatientTriageforER",
@@ -13202,6 +13499,32 @@
         "sourceProject": "AIRemotePatientMonitoring",
         "path": "frontend/src/pages/MedicationOptimizationPage.jsx",
         "route": "/MedicationOptimizationPage",
+        "originApp": "healthcare-life-sciences/patient-triagefor-er"
+      }
+    ]
+  },
+  {
+    "name": "Medication Regimen Optimization",
+    "canonicalKey": "medication optimization regimen",
+    "aliases": [],
+    "kinds": [
+      "ai-page"
+    ],
+    "routes": [
+      "/medication-optimization"
+    ],
+    "sourceProjects": [
+      "AIRemotePatientMonitoring"
+    ],
+    "consolidatedFromApps": [
+      "healthcare-life-sciences/patient-triagefor-er"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIRemotePatientMonitoring",
+        "path": "frontend/src/pages/MedicationOptimizationPage.jsx:1",
+        "route": "/medication-optimization",
         "originApp": "healthcare-life-sciences/patient-triagefor-er"
       }
     ]
@@ -13437,16 +13760,14 @@
     ]
   },
   {
-    "name": "Mental Health Screening Page",
+    "name": "Mental Health Screening",
     "canonicalKey": "health mental screening",
-    "aliases": [
-      "Mental Health Screening"
-    ],
+    "aliases": [],
     "kinds": [
+      "ai-page",
       "page"
     ],
     "routes": [
-      "/MentalHealthScreeningPage",
       "/mental-health-screening"
     ],
     "sourceProjects": [
@@ -13457,12 +13778,38 @@
     ],
     "evidence": [
       {
+        "kind": "ai-page",
+        "sourceProject": "AIRemotePatientMonitoring",
+        "path": "frontend/src/pages/MentalHealthScreeningPage.jsx:1",
+        "route": "/mental-health-screening",
+        "originApp": "healthcare-life-sciences/patient-triagefor-er"
+      },
+      {
         "kind": "page",
         "sourceProject": "AIRemotePatientMonitoring",
         "path": "frontend/src/App.jsx:70",
         "route": "/mental-health-screening",
         "originApp": "healthcare-life-sciences/patient-triagefor-er"
-      },
+      }
+    ]
+  },
+  {
+    "name": "Mental Health Screening Page",
+    "canonicalKey": "health mental screening",
+    "aliases": [],
+    "kinds": [
+      "page"
+    ],
+    "routes": [
+      "/MentalHealthScreeningPage"
+    ],
+    "sourceProjects": [
+      "AIRemotePatientMonitoring"
+    ],
+    "consolidatedFromApps": [
+      "healthcare-life-sciences/patient-triagefor-er"
+    ],
+    "evidence": [
       {
         "kind": "page",
         "sourceProject": "AIRemotePatientMonitoring",
@@ -14095,6 +14442,32 @@
     ]
   },
   {
+    "name": "Outbreak Prediction",
+    "canonicalKey": "outbreak prediction",
+    "aliases": [],
+    "kinds": [
+      "ai-page"
+    ],
+    "routes": [
+      "/ai-analysis?tool=predict"
+    ],
+    "sourceProjects": [
+      "AIPredictdisease"
+    ],
+    "consolidatedFromApps": [
+      "healthcare-life-sciences/patient-triagefor-er"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIPredictdisease",
+        "path": "frontend/src/pages/AIAnalysis.jsx:7",
+        "route": "/ai-analysis?tool=predict",
+        "originApp": "healthcare-life-sciences/patient-triagefor-er"
+      }
+    ]
+  },
+  {
     "name": "Outbreak Simulation",
     "canonicalKey": "outbreak simulation",
     "aliases": [],
@@ -14188,6 +14561,32 @@
         "sourceProject": "AIHealthcareCompanion",
         "path": "server/routes/settings.js:42",
         "route": "/password",
+        "originApp": "healthcare-life-sciences/patient-triagefor-er"
+      }
+    ]
+  },
+  {
+    "name": "Patient Education Customizer",
+    "canonicalKey": "customizer education patient",
+    "aliases": [],
+    "kinds": [
+      "ai-page"
+    ],
+    "routes": [
+      "/patient-education"
+    ],
+    "sourceProjects": [
+      "AIRemotePatientMonitoring"
+    ],
+    "consolidatedFromApps": [
+      "healthcare-life-sciences/patient-triagefor-er"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIRemotePatientMonitoring",
+        "path": "frontend/src/pages/PatientEducationPage.jsx:1",
+        "route": "/patient-education",
         "originApp": "healthcare-life-sciences/patient-triagefor-er"
       }
     ]
@@ -15448,11 +15847,13 @@
     "canonicalKey": "disease predict",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "api",
       "page"
     ],
     "routes": [
-      "/predict-disease"
+      "/predict-disease",
+      "/predict-disease?tool=predict-disease"
     ],
     "sourceProjects": [
       "AIPredictdisease"
@@ -15461,6 +15862,13 @@
       "healthcare-life-sciences/patient-triagefor-er"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIPredictdisease",
+        "path": "frontend/src/pages/DiseasePrediction.jsx:71",
+        "route": "/predict-disease?tool=predict-disease",
+        "originApp": "healthcare-life-sciences/patient-triagefor-er"
+      },
       {
         "kind": "api",
         "sourceProject": "AIPredictdisease",
@@ -16212,14 +16620,42 @@
     ]
   },
   {
+    "name": "Resource Optimization",
+    "canonicalKey": "optimization resource",
+    "aliases": [],
+    "kinds": [
+      "ai-page"
+    ],
+    "routes": [
+      "/ai-analysis?tool=optimize"
+    ],
+    "sourceProjects": [
+      "AIPredictdisease"
+    ],
+    "consolidatedFromApps": [
+      "healthcare-life-sciences/patient-triagefor-er"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIPredictdisease",
+        "path": "frontend/src/pages/AIAnalysis.jsx:34",
+        "route": "/ai-analysis?tool=optimize",
+        "originApp": "healthcare-life-sciences/patient-triagefor-er"
+      }
+    ]
+  },
+  {
     "name": "Resource Predict",
     "canonicalKey": "predict resource",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "api"
     ],
     "routes": [
-      "/resource-predict"
+      "/resource-predict",
+      "/resource-predictor?tool=resource-predict"
     ],
     "sourceProjects": [
       "AIPatientTriageforER"
@@ -16228,6 +16664,13 @@
       "healthcare-life-sciences/patient-triagefor-er"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIPatientTriageforER",
+        "path": "frontend/src/pages/ResourcePredictorPage.js:54",
+        "route": "/resource-predictor?tool=resource-predict",
+        "originApp": "healthcare-life-sciences/patient-triagefor-er"
+      },
       {
         "kind": "api",
         "sourceProject": "AIPatientTriageforER",
@@ -16532,6 +16975,32 @@
     ]
   },
   {
+    "name": "Risk Analysis",
+    "canonicalKey": "analysis risk",
+    "aliases": [],
+    "kinds": [
+      "ai-page"
+    ],
+    "routes": [
+      "/ai-analysis?tool=risk"
+    ],
+    "sourceProjects": [
+      "AIPredictdisease"
+    ],
+    "consolidatedFromApps": [
+      "healthcare-life-sciences/patient-triagefor-er"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIPredictdisease",
+        "path": "frontend/src/pages/AIAnalysis.jsx:21",
+        "route": "/ai-analysis?tool=risk",
+        "originApp": "healthcare-life-sciences/patient-triagefor-er"
+      }
+    ]
+  },
+  {
     "name": "Risk Analytics",
     "canonicalKey": "analytic risk",
     "aliases": [],
@@ -16586,12 +17055,14 @@
     "canonicalKey": "factor risk",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "api",
       "navigation",
       "page"
     ],
     "routes": [
-      "/risk-factors"
+      "/risk-factors",
+      "/risk-factors?tool=risk-factors"
     ],
     "sourceProjects": [
       "AIPredictdisease"
@@ -16600,6 +17071,13 @@
       "healthcare-life-sciences/patient-triagefor-er"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIPredictdisease",
+        "path": "frontend/src/pages/RiskFactorAnalysis.jsx:76",
+        "route": "/risk-factors?tool=risk-factors",
+        "originApp": "healthcare-life-sciences/patient-triagefor-er"
+      },
       {
         "kind": "api",
         "sourceProject": "AIPredictdisease",
@@ -17085,12 +17563,14 @@
     "canonicalKey": "predict seasonality",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "api",
       "page"
     ],
     "routes": [
       "/SeasonalityPredict",
-      "/seasonality-predict"
+      "/seasonality-predict",
+      "/seasonality-predict?tool=seasonality-predict"
     ],
     "sourceProjects": [
       "AIPredictdisease"
@@ -17099,6 +17579,13 @@
       "healthcare-life-sciences/patient-triagefor-er"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIPredictdisease",
+        "path": "frontend/src/pages/SeasonalityPredict.jsx:65",
+        "route": "/seasonality-predict?tool=seasonality-predict",
+        "originApp": "healthcare-life-sciences/patient-triagefor-er"
+      },
       {
         "kind": "api",
         "sourceProject": "AIPredictdisease",
@@ -17194,6 +17681,32 @@
         "sourceProject": "AIRemotePatientMonitoring",
         "path": "frontend/src/pages/SharedDecisionPage.jsx",
         "route": "/SharedDecisionPage",
+        "originApp": "healthcare-life-sciences/patient-triagefor-er"
+      }
+    ]
+  },
+  {
+    "name": "Shared Decision Making Aid",
+    "canonicalKey": "aid decision making shared",
+    "aliases": [],
+    "kinds": [
+      "ai-page"
+    ],
+    "routes": [
+      "/shared-decision"
+    ],
+    "sourceProjects": [
+      "AIRemotePatientMonitoring"
+    ],
+    "consolidatedFromApps": [
+      "healthcare-life-sciences/patient-triagefor-er"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIRemotePatientMonitoring",
+        "path": "frontend/src/pages/SharedDecisionPage.jsx:1",
+        "route": "/shared-decision",
         "originApp": "healthcare-life-sciences/patient-triagefor-er"
       }
     ]
@@ -17361,6 +17874,32 @@
         "sourceProject": "AIHealthcareCompanion",
         "path": "server/routes/visionTests.js:165",
         "route": "/chart/snellen",
+        "originApp": "healthcare-life-sciences/patient-triagefor-er"
+      }
+    ]
+  },
+  {
+    "name": "Social Determinants Assessment",
+    "canonicalKey": "assessment determinant social",
+    "aliases": [],
+    "kinds": [
+      "ai-page"
+    ],
+    "routes": [
+      "/social-determinants"
+    ],
+    "sourceProjects": [
+      "AIRemotePatientMonitoring"
+    ],
+    "consolidatedFromApps": [
+      "healthcare-life-sciences/patient-triagefor-er"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIRemotePatientMonitoring",
+        "path": "frontend/src/pages/SocialDeterminantsPage.jsx:1",
+        "route": "/social-determinants",
         "originApp": "healthcare-life-sciences/patient-triagefor-er"
       }
     ]
@@ -18889,6 +19428,32 @@
     ]
   },
   {
+    "name": "Trend Analysis",
+    "canonicalKey": "analysis trend",
+    "aliases": [],
+    "kinds": [
+      "ai-page"
+    ],
+    "routes": [
+      "/ai-analysis?tool=trends"
+    ],
+    "sourceProjects": [
+      "AIPredictdisease"
+    ],
+    "consolidatedFromApps": [
+      "healthcare-life-sciences/patient-triagefor-er"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIPredictdisease",
+        "path": "frontend/src/pages/AIAnalysis.jsx:47",
+        "route": "/ai-analysis?tool=trends",
+        "originApp": "healthcare-life-sciences/patient-triagefor-er"
+      }
+    ]
+  },
+  {
     "name": "Trends Without Seasonality",
     "canonicalKey": "seasonality trend without",
     "aliases": [],
@@ -18924,34 +19489,17 @@
     ],
     "routes": [
       "/TriagePage",
-      "/ai/triage",
       "/triage"
     ],
     "sourceProjects": [
-      "AIAmbulanceEMSDispatch",
       "AIAutomatepharmaceutical",
       "AIPatientTriageforER"
     ],
     "consolidatedFromApps": [
       "healthcare-life-sciences/acceleratedrug",
-      "healthcare-life-sciences/ambulance-ems-dispatch",
       "healthcare-life-sciences/patient-triagefor-er"
     ],
     "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "AIAmbulanceEMSDispatch",
-        "path": "server/routes/ai.js:205",
-        "route": "/triage",
-        "originApp": "healthcare-life-sciences/ambulance-ems-dispatch"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AIAmbulanceEMSDispatch",
-        "path": "client/src/App.jsx:228",
-        "route": "/ai/triage",
-        "originApp": "healthcare-life-sciences/ambulance-ems-dispatch"
-      },
       {
         "kind": "api",
         "sourceProject": "AIPatientTriageforER",
